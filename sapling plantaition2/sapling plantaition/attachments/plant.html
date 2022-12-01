@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant</title>
+    <link rel="stylesheet" href="plant.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <style>
+        #map {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="map.css">
+
+</head>
+
+<body>
+
+    <div id="card">
+        <div id="heading">
+            <h1 class="h-primary left" id="h1-1">Your plant id: <span> Bhubhneswar-001-001</span></h1>
+            <h5>Helping you make the right decision for your plants</h5>
+        </div>
+
+        <div id="plantcards">
+            <div id="temp">
+                <img
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M8 5a4 4 0 1 1 8 0v5.255a7 7 0 1 1-8 0V5zm1.144 6.895a5 5 0 1 0 5.712 0L14 11.298V5a2 2 0 1 0-4 0v6.298l-.856.597zm1.856.231V5h2v7.126A4.002 4.002 0 0 1 12 20a4 4 0 0 1-1-7.874zM12 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'/%3E%3C/svg%3E">
+                <h2 id="tempapi">+24°C</h2>
+                <div class="but">
+
+                    <p>Air Temp</p>
+                    <button id="button1">Good</button>
+                </div>
+            </div>
+            <div id="moist">
+                <img
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M4 4h4v2H4V4zm12 15h4v2h-4v-2zM2 9h5v2H2V9zm7 0h3v2H9V9zm5 0h6v2h-6V9zM4 14h6v2H4v-2zm8 0h3v2h-3v-2zm5 0h5v2h-5v-2zM10 4h12v2H10V4zM2 19h12v2H2v-2z'/%3E%3C/svg%3E">
+                <h2 id="moistapi">72%</h2>
+                <div class="but">
+                    <p>Soil Moisture</p>
+                    <button id="button2">High</button>
+                </div>
+            </div>
+            <div id="sunlight">
+                <img
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z'/%3E%3C/svg%3E">
+                <h2 id="sunlightapi">Sunny</h2>
+                <div class="but">
+
+                    <p>Sunlight</p>
+                    <button id="button3">Good</button>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="img">
+
+            </div>
+            <div id="para">
+                <h1>Paragraph</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem non nulla consequuntur dicta quasi
+                    necessitatibus! Soluta ad, accusantium, fuga quidem inventore in dolores quae enim nam earum
+                    doloribus esse dolore! Molestias dicta, alias eius totam esse eaque, at eveniet ipsum tempore,
+                    libero error optio soluta deserunt voluptatibus quibusdam! Assumenda corrupti, repellat officiis
+                    magnam hic voluptatem fugiat dolorem voluptates quia modi, vero consequatur harum? Obcaecati, atque
+                    et ipsum nihil dignissimos eos eligendi quisquam blanditiis nisi facilis nemo quaerat facere
+                    pariatur. Sed fugiat consequatur quam iusto dolorum. Est asperiores qui nisi voluptatibus nobis unde
+                    ad non voluptatem.</p>
+                <button id="parabut">CLICK ME!</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="info">
+        <div id="map">
+
+        </div>
+        <div id="curr">
+            <h1>Current condition of your plant</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, sequi dicta possimus, harum, architecto
+                deleniti explicabo nulla amet necessitatibus earum fugiat voluptates. Minus officiis expedita placeat
+                voluptate illo quam nesciunt esse. Voluptate aut, fuga excepturi, rerum non atque amet architecto
+                praesentium accusantium hic magni esse vitae pariatur necessitatibus aspernatur facilis! Minus, fugiat
+                architecto consectetur quidem sit id necessitatibus delectus voluptatum dolore. Harum suscipit quis
+                voluptas quo nisi possimus! Ad reiciendis molestias delectus iusto quaerat asperiores dolorum atque,
+                earum nulla ea, id natus itaque distinctio harum ratione iure deserunt a. Mollitia dignissimos iste
+                aliquam dolorum temporibus rem? Placeat aliquid consequatur minima id assumenda temporibus, magnam
+                perspiciatis eos doloribus fuga, voluptatibus similique ex tenetur excepturi iusto aut, corrupti ipsum
+                itaque voluptates sequi commodi magni architecto dolore inventore?</p>
+        </div>
+
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    var map = L.map('map').setView([20.268173, 85.772626], 15);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([20.270596, 85.811222]).addTo(map)
+        .bindPopup('Plant Detail from database')
+        .openPopup();
+
+</script>
+
+</html>

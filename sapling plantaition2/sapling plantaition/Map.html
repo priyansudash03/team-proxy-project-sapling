@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <style>
+        #map{top: 0;bottom: 0; left: 0; right: 0;}
+    </style>
+    <link rel="stylesheet" href="map.css">
+    <title>Map2.0</title>
+</head>
+<body>
+    <h1>Regions where all sapling are planted</h1> 
+    <div id="map">
+
+    </div>
+    <div class="options">
+        <label for="area-select" style="color:rgb(196, 247, 196) ; font-size:30px;text-transform:capitalize;">Choose an area:</label>
+
+<select id="area-select">
+    <option value="">--Please choose an option--</option>
+    <option value="dog">Area 1</option>
+    <option value="cat">Area 2</option>
+    <option value="hamster">Area 3</option>
+    <option value="parrot">Area 4</option>
+</select>
+    </div>
+    <section><ul>
+        <li><a href="attachments\plant.html">Bhubhneswar-001-001</li>
+        <li><a href="#">Bhubhneswar-001-002</li>
+        <li><a href="#">Bhubhneswar-001-003</li>
+    </ul></section>
+    <script>
+    var map = L.map('map').setView([20.268173, 85.772626], 15);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([20.263338, 85.779960]).addTo(map)
+.bindPopup('Plant Detail from database')
+.openPopup();
+L.marker([20.264415, 85.762449]).addTo(map)
+.bindPopup('Plant Detail from database')
+.openPopup();
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../csw"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "web dev",
+		"liveServer.settings.port": 5501
+	}
+}

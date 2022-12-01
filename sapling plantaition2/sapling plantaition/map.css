@@ -1,0 +1,21 @@
+body{
+    background: url("77.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#map{
+    
+    height: 50vh;
+    width:90%;
+}
+h1{
+    color: rgb(200, 247, 200);
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#area-select{
+    color: rgb(13, 74, 13);
+}

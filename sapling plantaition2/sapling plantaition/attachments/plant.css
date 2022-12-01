@@ -1,0 +1,164 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+   background:url("77.png");
+ 
+    height: 100vh;
+    width: 100vw;
+
+}
+
+:root {
+    --color1: #C1E8D4;
+    --color2: #79A481;
+    --color3: #47775F;
+    --color4: #A9DFC5;
+    --color5: #A7CE9F;
+    --color6: #142C1C;
+    --color7: #547D6C;
+    --color8: #456A58;
+    --color9: #375A49;
+    --color10: #9DC4B4;
+    --color11: #BCE4A4;
+    --color12: #84BC94;
+    --color13: #f3fff9;
+}
+
+#heading {
+    text-align: center;
+    font-size: large;
+}
+
+#card {
+    float: left;
+    border-right: 2px solid;
+}
+
+#info {
+    float: right;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+}
+
+#img {
+    background: url('tree.jpg');
+    background-size: cover;
+    border-radius: 2em;
+    height: 470px;
+    width: 375px;
+    margin-left: 10px;
+    float: left;
+}
+
+#para {
+    text-align: center;
+    border: 1px solid;
+    float: right;
+    width: 390px;
+    margin-left: 28px;
+    border-radius: 2em;
+}
+
+#plantcards {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#temp {
+    border-radius: 2em;
+    background-color: #BCE4A4;
+    width: 200px;
+    height: 120px;
+    padding: 1.5em;
+    margin: 13px;
+}
+
+#moist {
+    border-radius: 2em;
+    background-color: #9DC4B4;
+    width: 200px;
+    height: 120px;
+    padding: 1.5em;
+    margin: 13px;
+}
+
+#sunlight {
+    border-radius: 2em;
+    background-color: #547D6C;
+    width: 200px;
+    height: 120px;
+    padding: 1.5em;
+    margin: 13px;
+}
+
+#map {
+    
+    background-size: cover;
+    height: 400px;
+    width: 600px;
+    border-radius: 20px;
+    margin-right: 55px;
+}
+
+.but {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    height: 23px;
+    border-radius: 13px;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+#button1 {
+    background-color: #BCE4A4;
+    box-shadow: 0px 3px 2px 2.5px #8daf79;
+}
+
+#button2 {
+    background-color: #9DC4B4;
+    box-shadow: 0px 3px 2px 2.5px #779789;
+}
+
+#button3 {
+    background-color: #547D6C;
+    box-shadow: 0px 3px 2px 2.5px #446357;
+}
+
+#curr {
+    border: 1px solid;
+    height: 381px;
+    width: 600px;
+    margin-top: 15px;
+    border-radius: 2em;
+    text-align: center;
+}
+
+#parabut {
+    width: 50%;
+    margin: auto;
+}
